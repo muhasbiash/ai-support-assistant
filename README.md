@@ -1,24 +1,19 @@
-# README
+# AI Support Assistant
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+AI Support Assistant built with Ruby on Rails.
 
-Things you may want to cover:
+## Tech Stack
 
-* Ruby version
+- Ruby 3.3.5
+- Ruby on Rails 8.1.4
+- PostgreSQL
+- OpenAI Ruby SDK
+- Mock AI Provider
 
-* System dependencies
+## Features
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Create conversations
+- Send messages
+- Store messages in PostgreSQL
+- Generate mock AI responses
+- AI provider abstraction for future OpenAI integration
