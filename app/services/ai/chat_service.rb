@@ -11,7 +11,12 @@ module Ai
     private
 
     def provider
-      Ai::MockProvider.new(@message)
+      case ENV.fetch("AI_PROVIDER", "mock")
+      when "openai"
+        Ai::OpenaiProvider.new(@message)
+      else
+        Ai::MockProvider.new(@message)
+      end
     end
   end
 end
