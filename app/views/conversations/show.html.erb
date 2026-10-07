@@ -1,0 +1,26 @@
+<h1><%= @conversation.title %></h1>
+
+<% @conversation.messages.each do |message| %>
+  <div>
+    <strong><%= message.role %>:</strong>
+    <%= message.content %>
+  </div>
+<% end %>
+
+<hr>
+
+<%= form_with url: conversation_messages_path(@conversation), method: :post do |form| %>
+  <div>
+    <%= form.label :content, "Your message" %>
+  </div>
+
+  <div>
+    <%= form.text_area :content, rows: 4 %>
+  </div>
+
+  <div>
+    <%= form.submit "Send" %>
+  </div>
+<% end %>
+
+<%= link_to "Back", conversations_path %>
