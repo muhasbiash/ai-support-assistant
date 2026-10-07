@@ -66,3 +66,5 @@ group :test do
 end
 
 gem "openai", "~> 0.101.0"
+
+gem "dotenv-rails", "~> 3.2", group: :development
