@@ -12,10 +12,12 @@ module Ai
 
     def provider
       case ENV.fetch("AI_PROVIDER", "mock")
+      when "mock"
+        Ai::MockProvider.new(@message)
       when "openai"
         Ai::OpenaiProvider.new(@message)
       else
-        Ai::MockProvider.new(@message)
+        raise "Unsupported AI provider: #{ENV['AI_PROVIDER']}"
       end
     end
   end
