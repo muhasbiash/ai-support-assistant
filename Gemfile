@@ -65,6 +65,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "openai", "~> 0.101.0"
+gem "openai", "~> 0.103.0"
 
 gem "dotenv-rails", "~> 3.2", group: :development
